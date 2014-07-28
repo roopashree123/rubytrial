@@ -1,4 +1,8 @@
 Online::Application.routes.draw do
+  get "name/hello"
+
+  get "name/hi"
+
   get "sample/home"
 
   get "sample/about"
