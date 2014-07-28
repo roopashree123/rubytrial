@@ -1,4 +1,10 @@
 Online::Application.routes.draw do
+  resources :models
+
+
+  resources :sens
+
+
   resources :mosttwos
 
 
