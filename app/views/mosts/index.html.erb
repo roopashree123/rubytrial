@@ -1,0 +1,23 @@
+<h1>Listing mosts</h1>
+
+<table>
+  <tr>
+    <th>Phone</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @mosts.each do |most| %>
+  <tr>
+    <td><%= most.phone %></td>
+    <td><%= link_to 'Show', most %></td>
+    <td><%= link_to 'Edit', edit_most_path(most) %></td>
+    <td><%= link_to 'Destroy', most, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Most', new_most_path %>

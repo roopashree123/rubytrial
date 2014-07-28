@@ -1,4 +1,19 @@
 Online::Application.routes.draw do
+  resources :mosttwos
+
+
+  resources :mosts
+
+
+  resources :ones
+
+
+  resources :strongs
+
+
+  resources :details
+
+
   get "name/hello"
 
   get "name/hi"

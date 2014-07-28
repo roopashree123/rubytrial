@@ -1,0 +1,21 @@
+<%= form_for(@most) do |f| %>
+  <% if @most.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@most.errors.count, "error") %> prohibited this most from being saved:</h2>
+
+      <ul>
+      <% @most.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.number_field :phone %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

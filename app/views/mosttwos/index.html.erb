@@ -1,0 +1,23 @@
+<h1>Listing mosttwos</h1>
+
+<table>
+  <tr>
+    <th>Phone</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @mosttwos.each do |mosttwo| %>
+  <tr>
+    <td><%= mosttwo.phone %></td>
+    <td><%= link_to 'Show', mosttwo %></td>
+    <td><%= link_to 'Edit', edit_mosttwo_path(mosttwo) %></td>
+    <td><%= link_to 'Destroy', mosttwo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Mosttwo', new_mosttwo_path %>

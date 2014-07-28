@@ -1,0 +1,21 @@
+<%= form_for(@mosttwo) do |f| %>
+  <% if @mosttwo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mosttwo.errors.count, "error") %> prohibited this mosttwo from being saved:</h2>
+
+      <ul>
+      <% @mosttwo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.number_field :phone %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
